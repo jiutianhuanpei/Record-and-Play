@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBZ-9U-Rk1">
+                                <rect key="frame" x="209" y="389" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="CMw-EI-ZHI"/>
+                                    <constraint firstAttribute="height" constant="30" id="D9u-8k-uhi"/>
+                                </constraints>
+                                <state key="normal" title="录音">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3gJ-wK-YeB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-Pu-WUo">
+                                <rect key="frame" x="361" y="389" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="61R-vN-Xb3"/>
+                                    <constraint firstAttribute="height" constant="30" id="Td3-tc-R5z"/>
+                                </constraints>
+                                <state key="normal" title="播放">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Apw-fg-Ouq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GXu-Pu-WUo" secondAttribute="centerX" constant="-76" id="2Xd-1y-RHI"/>
+                            <constraint firstAttribute="centerX" secondItem="vBZ-9U-Rk1" secondAttribute="centerX" constant="76" id="5rq-dx-IOc"/>
+                            <constraint firstAttribute="centerY" secondItem="vBZ-9U-Rk1" secondAttribute="centerY" constant="-104" id="MFO-uq-L9v"/>
+                            <constraint firstAttribute="centerY" secondItem="GXu-Pu-WUo" secondAttribute="centerY" constant="-104" id="P59-NK-ba4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="GXu-Pu-WUo" id="OBE-xI-872"/>
+                        <outlet property="recordButton" destination="vBZ-9U-Rk1" id="rmu-wL-H8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
